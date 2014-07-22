@@ -1,0 +1,25 @@
+#base{
+    width: 700px;
+    margin: auto;
+}
+#title{
+    height: 65px;
+    margin-bottom: 20px;
+}
+#logo{
+    margin: 10px 0 0 40px;
+    float: left;
+}
+#logo img{
+    width: 165px;
+    height: 55px;
+}
+#section-title{
+    color: #232424;
+    /* Futura */
+    font-size: 40px;
+    float: right;
+    margin: 15px 100px 0 0;
+}
+#navigation{
+}
