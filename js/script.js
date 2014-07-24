@@ -1,4 +1,34 @@
 $(function () {
+
+    $( "#form-id" ).submit(function( event ) {
+        event.preventDefault();
+        var $form = $( this ),
+            /*nameVal = $("#name").val(),
+            emailVal = $("#email").val(),
+            selectVal = $form.find( "input[name='select']" ).val(),
+            checkbox1Val = $("#first-checkbox").attr('checked'),
+            checkbox2Val = $("#second-checkbox").attr('checked'),*/
+
+            url = $form.attr( "action" );
+            var posting = $.post( url, $( "#form-id" ).serialize());
+
+       /* var posting = $.post( url, { name: nameVal, email: emailVal, select: selectVal, checkbox1: checkbox1Val, checkbox2: checkbox2Val } );*/
+
+       /* console.log(posting);*/
+/*
+        posting.done(function( data ) {
+            if( data ){
+                $('#yes').show();
+                $('#not').hide();
+            }
+            else{
+                $('#yes').hide();
+                $('#not').show();
+            }
+
+        });*/
+    });
+
     /* select*/
     $('#cd-dropdown').dropdown({
         gutter : 5,
@@ -82,7 +112,7 @@ $(function () {
         if (name && email && check && radio.length) {
             $.ajax({
                 type: "POST",
-                /*url: "js/ajax.php", */
+                url: url,
                 data: {"name": name},
                 cache: false,
                 success: function (e) {

@@ -6,13 +6,13 @@
     <meta charset="UTF-8"/>
 
     <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
-    <script type="text/javascript" src="js/jquery-1.11.1.min.js" ></script>
-    <script type="text/javascript" src="js/script.js" ></script>
+    <script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
     <script type="text/javascript" src="js/modernizr.custom.63321.js"></script>
     <script type="text/javascript" src="js/jquery.dropdown.js"></script>
 
     <link type="text/css" rel="stylesheet" href="css/style.css">
-    <link type="text/css" rel="stylesheet" href="css/style6.css" />
+    <link type="text/css" rel="stylesheet" href="css/style6.css"/>
 
 </head>
 <body>
@@ -25,72 +25,73 @@
 <!-- Contents -->
 <!-------------->
 <div id='base'>
-    <div id='title'>
-        <span id='logo'><img src="images/logo.png"></span>
-        <span id='section-title'>SECTION TITLE</span>
-    </div>
-    <div id='navigation'>
-        <a href="#"><span id='prev'>< Prev</span></a>
-        <a href="#"><span id='next'>Next ></span></a>
-    </div>
-    <div>
-        <input id="name" class="input-for-enter" placeholder="Name">
-    </div>
-    <div>
-        <input id="email" class="input-for-enter" placeholder="Email">
-    </div>
-
-
-    <select id="cd-dropdown" class="cd-select">
-        <option value="-1" selected>Choose country: </option>
-        <option value="1" class="icon-monkey">Belarus</option>
-        <option value="2" class="icon-bear">Germany</option>
-        <option value="3" class="icon-squirrel">Russia</option>
-        <option value="4" class="icon-elephant">USA</option>
-    </select>
-
-    <div id="div-checkboxes">
-        <form>
-
-            <div class="div-checkbox">
-                <input type="checkbox" id="first-checkbox">
-                <span class="text-checkbox">I agree with Conditions.</span>
-            </div>
-            <div class="div-checkbox">
-                <input type="checkbox" id="second-checkbox">
-                <span class="text-checkbox">I agree to receive notification.</span>
-            </div>
-
-        </form>
-    </div>
-
-    <div id="div-radios">
-        <p>Method of payment:</p>
-        <form>
-
-            <div class="div-radio">
-                <input type="radio" name="group-radio" id="first-radio">
-                <span class="text-radio">Master Card</span>
-            </div>
-            <div class="div-radio">
-                <input type="radio" name="group-radio" id="second-radio">
-                <span class="text-radio">Visa Electron</span>
-            </div>
-            <div class="div-radio">
-                <input type="radio" name="group-radio" id="third-radio">
-                <span class="text-radio">Maestro</span>
-            </div>
-
-        </form>
-    </div>
-
-    <a href="#">
-        <div id="button">
-            <span>BUY</span>
+    <form action="/" id='form-id' method="post">
+        <div id='title'>
+            <span id='logo'><img src="images/logo.png"></span>
+            <span id='section-title'>SECTION TITLE</span>
         </div>
-    </a>
-    <div id="yes">The data was successfully saved</div>
-    <div id="not">Data is not saved</div>
+        <div id='navigation'>
+            <a href="#"><span id='prev'>< Prev</span></a>
+            <a href="#"><span id='next'>Next ></span></a>
+        </div>
+        <div>
+            <input id="name" name='name' class="input-for-enter" placeholder="Name">
+        </div>
+        <div>
+            <input id="email" name='email' class="input-for-enter" placeholder="Email">
+        </div>
+
+
+        <select id="cd-dropdown" class="cd-select" name="select">
+            <option value="-1" selected>Choose country:</option>
+            <option value="1" class="icon-monkey">Belarus</option>
+            <option value="2" class="icon-bear">Germany</option>
+            <option value="3" class="icon-squirrel">Russia</option>
+            <option value="4" class="icon-elephant">USA</option>
+        </select>
+
+        <div id="div-checkboxes">
+
+                <div class="div-checkbox">
+                    <input type="checkbox" id="first-checkbox" name="first-checkbox">
+                    <span class="text-checkbox">I agree with Conditions.</span>
+                </div>
+                <div class="div-checkbox">
+                    <input type="checkbox" id="second-checkbox" name="second-checkbox">
+                    <span class="text-checkbox">I agree to receive notification.</span>
+                </div>
+
+        </div>
+
+        <div id="div-radios">
+            <p>Method of payment:</p>
+
+                <div class="div-radio">
+                    <input type="radio" name="group-radio" id="first-radio" value="first-radio" >
+                    <span class="text-radio">Master Card</span>
+                </div>
+                <div class="div-radio">
+                    <input type="radio" name="group-radio" id="second-radio" value="second-radio">
+                    <span class="text-radio">Visa Electron</span>
+                </div>
+                <div class="div-radio">
+                    <input type="radio" name="group-radio" id="third-radio" value="third-radio">
+                    <span class="text-radio">Maestro</span>
+                </div>
+
+        </div>
+
+        <a href="tut.by">
+            <div id="button">
+                <span>BUY</span>
+            </div>
+        </a>
+
+        <input id='sub' type="submit" >
+
+        <div id="yes">The data was successfully saved</div>
+        <div id="not">Data is not saved</div>
+    </form>
 </div>
 <!-------------->
 <!-- Footer	  -->

@@ -38,10 +38,9 @@ a{
 
 #section-title {
     color: #232424;
-    /* Futura */
     font-size: 40px;
 }
-.input-for-enter, #button, #yes, #not, #navigation{
+.input-for-enter, #button, #yes, #not, #navigation, #sub{
     margin: 10px;
     width: 100%;
     height: 100px;
@@ -144,4 +143,8 @@ a{
     color: #a5a5a5;
     background-color: #f8f7f6;
     border: 2px solid #a5a5a5;
+}
+
+#sub{
+    font-size: 36px;
 }
