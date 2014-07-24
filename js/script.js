@@ -2,8 +2,9 @@ $(function () {
 
     $( "#form-id" ).submit(function( event ) {
         event.preventDefault();
-        var $form = $( this ),
-            /*nameVal = $("#name").val(),
+          var $form = $( this ),
+              /*
+            nameVal = $("#name").val(),
             emailVal = $("#email").val(),
             selectVal = $form.find( "input[name='select']" ).val(),
             checkbox1Val = $("#first-checkbox").attr('checked'),
@@ -14,19 +15,15 @@ $(function () {
 
        /* var posting = $.post( url, { name: nameVal, email: emailVal, select: selectVal, checkbox1: checkbox1Val, checkbox2: checkbox2Val } );*/
 
-       /* console.log(posting);*/
-/*
-        posting.done(function( data ) {
-            if( data ){
+        posting.done(function() {
                 $('#yes').show();
                 $('#not').hide();
-            }
-            else{
-                $('#yes').hide();
-                $('#not').show();
-            }
 
-        });*/
+        });
+        posting.fail(function() {
+            $('#yes').hide();
+            $('#not').show();
+        });
     });
 
     /* select*/
