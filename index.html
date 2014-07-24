@@ -1,33 +1,101 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Home</title>
-		<link rel="shortcut icon" type="image/ico" href="images/favicon.ico" />
-		<meta charset="UTF-8" />
-		<script src="js/jquery-1.11.1.min.js" type="text/javascript"></script>
-        <link rel="stylesheet" href="css/style.css">
-	</head>
-	<body>
-		<!------------>
-		<!-- Header -->
-		<!------------>
-		<header>
-		</header>
-		<!-------------->
-		<!-- Contents -->
-		<!-------------->
-		<div id='base'>
-            <div id='title'>
-                <div id='logo'><img src="images/logo.png"></div>
-                <div id='section-title'>SECTION TITLE</div>
+<head>
+    <title>Home</title>
+    <link rel="shortcut icon" type="image/ico" href="images/favicon.ico"/>
+    <meta charset="UTF-8"/>
+
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery-1.11.1.min.js" ></script>
+    <script type="text/javascript" src="js/script.js" ></script>
+    <script type="text/javascript" src="js/modernizr.custom.63321.js"></script>
+    <script type="text/javascript" src="js/jquery.dropdown.js"></script>
+
+    <link type="text/css" rel="stylesheet" href="css/style.css">
+    <link type="text/css" rel="stylesheet" href="css/style6.css" />
+
+</head>
+<body>
+<!------------>
+<!-- Header -->
+<!------------>
+<header>
+</header>
+<!-------------->
+<!-- Contents -->
+<!-------------->
+<div id='base'>
+    <div id='title'>
+        <span id='logo'><img src="images/logo.png"></span>
+        <span id='section-title'>SECTION TITLE</span>
+    </div>
+    <div id='navigation'>
+        <a href="#"><span id='prev'>< Prev</span></a>
+        <a href="#"><span id='next'>Next ></span></a>
+    </div>
+    <div>
+        <input id="name" class="input-for-enter" placeholder="Name">
+    </div>
+    <div>
+        <input id="email" class="input-for-enter" placeholder="Email">
+    </div>
+
+
+    <select id="cd-dropdown" class="cd-select">
+        <option value="-1" selected>Choose country: </option>
+        <option value="1" class="icon-monkey">Belarus</option>
+        <option value="2" class="icon-bear">Germany</option>
+        <option value="3" class="icon-squirrel">Russia</option>
+        <option value="4" class="icon-elephant">USA</option>
+    </select>
+
+    <div id="div-checkboxes">
+        <form>
+
+            <div class="div-checkbox">
+                <input type="checkbox" id="first-checkbox">
+                <span class="text-checkbox">I agree with Conditions.</span>
             </div>
-            <div id='navigation'>Next</div>
-            trgbtdrhbeth
-		</div>
-		<!-------------->
-		<!-- Footer	  -->
-		<!-------------->
-		<footer>
-		</footer>
-	</body>
+            <div class="div-checkbox">
+                <input type="checkbox" id="second-checkbox">
+                <span class="text-checkbox">I agree to receive notification.</span>
+            </div>
+
+        </form>
+    </div>
+
+    <div id="div-radios">
+        <p>Method of payment:</p>
+        <form>
+
+            <div class="div-radio">
+                <input type="radio" name="group-radio" id="first-radio">
+                <span class="text-radio">Master Card</span>
+            </div>
+            <div class="div-radio">
+                <input type="radio" name="group-radio" id="second-radio">
+                <span class="text-radio">Visa Electron</span>
+            </div>
+            <div class="div-radio">
+                <input type="radio" name="group-radio" id="third-radio">
+                <span class="text-radio">Maestro</span>
+            </div>
+
+        </form>
+    </div>
+
+    <a href="#">
+        <div id="button">
+            <span>BUY</span>
+        </div>
+    </a>
+    <div id="yes">The data was successfully saved</div>
+    <div id="not">Data is not saved</div>
+</div>
+<!-------------->
+<!-- Footer	  -->
+<!-------------->
+<footer>
+</footer>
+</body>
 </html>
