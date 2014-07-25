@@ -1,19 +1,12 @@
 $(function () {
 
-    $("#form-id").submit(function (event) {
+/*    $("#form-id").submit(function (event) {
         event.preventDefault();
         var $form = $(this),
-        /*
-         nameVal = $("#name").val(),
-         emailVal = $("#email").val(),
-         selectVal = $form.find( "input[name='select']" ).val(),
-         checkbox1Val = $("#first-checkbox").attr('checked'),
-         checkbox2Val = $("#second-checkbox").attr('checked'),*/
+
 
             url = $form.attr("action");
         var posting = $.post(url, $("#form-id").serialize());
-
-        /* var posting = $.post( url, { name: nameVal, email: emailVal, select: selectVal, checkbox1: checkbox1Val, checkbox2: checkbox2Val } );*/
 
         posting.done(function () {
             $('#yes').show();
@@ -24,7 +17,17 @@ $(function () {
             $('#yes').hide();
             $('#not').show();
         });
-    });
+    });*/
+        /*
+         nameVal = $("#name").val(),
+         emailVal = $("#email").val(),
+         selectVal = $form.find( "input[name='select']" ).val(),
+         checkbox1Val = $("#first-checkbox").attr('checked'),
+         checkbox2Val = $("#second-checkbox").attr('checked'),*/
+
+        /* var posting = $.post( url, { name: nameVal, email: emailVal, select: selectVal, checkbox1: checkbox1Val, checkbox2: checkbox2Val } );*/
+
+
 
     /* select*/
     $('#cd-dropdown').dropdown({
@@ -79,7 +82,7 @@ $(function () {
 
             input2.toggleClass('view-radio-selected');
             isSelected = input2.hasClass('view-radio-selected');
-            /*base2.$el.attr('selected', isSelected);*/
+            base2.$el.attr('checked', isSelected);
         });
 
     };
@@ -98,19 +101,15 @@ $(function () {
         var name = $('#name').val();
         var email = $('#email').val();
         var check = $('#first-checkbox').attr('checked');
-        /* var radioFirst = $('first-radio').attr('selected');
-         var radioSecond = $('second-radio').attr('selected');
-         var radioThird = $('third-radio').attr('selected');
-         alert(radioFirst + " " + radioSecond + " " +radioThird);*/
         var radio = document.getElementsByClassName("view-radio-selected");
 
-        /*var select = document.getElementsByName('cd-dropdown').value;*/
+        var select = $("#form-id").find( "input[name='select']" ).val();
 
-        if (name && email && check && radio.length) {
+        if (name && email && check && radio.length && select>0) {
             $.ajax({
                 type: "POST",
-                url: url,
-                data: {"name": name},
+                url: "http://localhost",
+                data: $("#form-id").serialize(),
                 cache: false,
                 success: function (e) {
                     if (e) {
