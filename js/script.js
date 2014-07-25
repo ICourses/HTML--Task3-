@@ -1,26 +1,26 @@
 $(function () {
 
-    $( "#form-id" ).submit(function( event ) {
+    $("#form-id").submit(function (event) {
         event.preventDefault();
-          var $form = $( this ),
-              /*
-            nameVal = $("#name").val(),
-            emailVal = $("#email").val(),
-            selectVal = $form.find( "input[name='select']" ).val(),
-            checkbox1Val = $("#first-checkbox").attr('checked'),
-            checkbox2Val = $("#second-checkbox").attr('checked'),*/
+        var $form = $(this),
+        /*
+         nameVal = $("#name").val(),
+         emailVal = $("#email").val(),
+         selectVal = $form.find( "input[name='select']" ).val(),
+         checkbox1Val = $("#first-checkbox").attr('checked'),
+         checkbox2Val = $("#second-checkbox").attr('checked'),*/
 
-            url = $form.attr( "action" );
-            var posting = $.post( url, $( "#form-id" ).serialize());
+            url = $form.attr("action");
+        var posting = $.post(url, $("#form-id").serialize());
 
-       /* var posting = $.post( url, { name: nameVal, email: emailVal, select: selectVal, checkbox1: checkbox1Val, checkbox2: checkbox2Val } );*/
+        /* var posting = $.post( url, { name: nameVal, email: emailVal, select: selectVal, checkbox1: checkbox1Val, checkbox2: checkbox2Val } );*/
 
-        posting.done(function() {
-                $('#yes').show();
-                $('#not').hide();
+        posting.done(function () {
+            $('#yes').show();
+            $('#not').hide();
 
         });
-        posting.fail(function() {
+        posting.fail(function () {
             $('#yes').hide();
             $('#not').show();
         });
@@ -28,10 +28,10 @@ $(function () {
 
     /* select*/
     $('#cd-dropdown').dropdown({
-        gutter : 5,
-        stack : false,
-        delay : 100,
-        slidingIn : 100
+        gutter: 5,
+        stack: false,
+        delay: 100,
+        slidingIn: 100
     });
 
     /* checkbox*/
@@ -98,10 +98,10 @@ $(function () {
         var name = $('#name').val();
         var email = $('#email').val();
         var check = $('#first-checkbox').attr('checked');
-       /* var radioFirst = $('first-radio').attr('selected');
-        var radioSecond = $('second-radio').attr('selected');
-        var radioThird = $('third-radio').attr('selected');
-        alert(radioFirst + " " + radioSecond + " " +radioThird);*/
+        /* var radioFirst = $('first-radio').attr('selected');
+         var radioSecond = $('second-radio').attr('selected');
+         var radioThird = $('third-radio').attr('selected');
+         alert(radioFirst + " " + radioSecond + " " +radioThird);*/
         var radio = document.getElementsByClassName("view-radio-selected");
 
         /*var select = document.getElementsByName('cd-dropdown').value;*/
@@ -113,7 +113,7 @@ $(function () {
                 data: {"name": name},
                 cache: false,
                 success: function (e) {
-                    if(e){
+                    if (e) {
                         $('#yes').show();
                         $('#not').hide();
                         $('#name').value = "";
@@ -122,8 +122,7 @@ $(function () {
                 }
             });
         }
-        else
-        {
+        else {
             $('#not').show();
             $('#yes').hide();
         }
